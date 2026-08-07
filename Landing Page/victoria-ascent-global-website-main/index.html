@@ -6,6 +6,7 @@
     <title>Victoria Ascent Global - Ventas y Oportunidad de Negocio</title>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="css/problema-modal.css">
 </head>
 <body>
     <!-- CURSOR -->
@@ -16,14 +17,7 @@
     <nav class="navbar">
         <div class="container">
             <div class="logo">
-                <svg width="50" height="50" viewBox="0 0 300 300" xmlns="http://www.w3.org/2000/svg">
-                    <circle cx="150" cy="150" r="120" stroke="#C89B3C" stroke-width="6" fill="none"/>
-                    <path d="M20 210 Q240 180 260 140" stroke="#C89B3C" stroke-width="6" fill="none"/>
-                    <polygon points="260,140 250,145 255,130" fill="#C89B3C"/>
-                    <text x="85" y="170" font-size="110" font-family="Georgia, serif" fill="#0B2A4A" font-weight="bold">V</text>
-                    <text x="150" y="170" font-size="110" font-family="Georgia, serif" fill="#C89B3C" font-weight="bold">A</text>
-                    <path d="M90 165 Q150 120 210 165" stroke="#C89B3C" stroke-width="5" fill="none"/>
-                </svg>
+                <img src="img/Logo/Premium.png" alt="Victoria Ascent Global" class="logo-img">
                 <div class="logo-text">
                     <span class="logo-name">Victoria Ascent Global</span>
                     <span class="logo-tagline">Distribuidora Independiente</span>
@@ -78,7 +72,7 @@
                 </div>
             </div>
             <div class="hero-visual reveal">
-                <img src="img/Productos/Sartenes Royal Prestige.jpg" alt="Sistema de Cocción Royal Prestige">
+                <img src="img/Productos/Sartenes Royal Prestige.jpg" alt="Cocina moderna con Royal Prestige">
                 <div class="hero-visual-badge">
                     <span class="hero-logo-ring">VA</span>
                     <span class="hero-visual-brand">ROYAL<br>PRESTIGE</span>
@@ -138,11 +132,29 @@
             <h2 class="section-title reveal-delay-1" style="text-align:center;">Lo que muchas familias<br><em>no saben que están viviendo</em></h2>
             <div class="gold-line reveal-delay-2" style="margin: 1.5rem auto 3rem;"></div>
             <div class="problema-grid">
-                <div class="problema-item reveal">
-                    <span class="problema-icon">⚠️</span>
-                    <h3>Sartenes que contaminan</h3>
-                    <p>Los recubrimientos antiadherentes baratos liberan toxinas al calentarse. Tu familia lo consume sin saberlo.</p>
+                <div class="problema-item reveal clickable problema-destacado" id="pmCard" onclick="pmOpenModal()">
+                <img src="img/Problema/Contaminantes.png"
+                    alt="Microplásticos en sartenes antiadherentes"
+                    class="problema-img">
+                    <div class="problema-contenido">
+                    <span class="problema-badge">
+                        ⚠️ ¡PELIGRO EN TU SARTÉN!
+                    </span>
+                    <h3>¿Sabías que tu sartén podría estar contaminando tus alimentos?</h3>
+                    <p>
+                        Un solo rasguño en una sartén antiadherente puede liberar
+                        <strong>hasta 9,000 partículas microplásticas</strong>.
+                        <strong>Si el recubrimiento está dañado, la exposición podría superar los 2 millones de partículas.</strong>
+                    </p>
+                    <p>
+                        Si el recubrimiento está dañado,
+                        podrían liberarse <strong>más de 2 millones</strong> de partículas.
+                    </p>
+                    <span class="problema-link">
+                        Descubre por qué sucede →
+                    </span>
                 </div>
+            </div>              
                 <div class="problema-item reveal-delay-1">
                     <span class="problema-icon">💸</span>
                     <h3>Gastar más cocinando más</h3>
@@ -163,12 +175,25 @@
     <!-- ROYAL PRESTIGE -->
     <section id="marca">
         <div class="container">
-            <p class="section-label reveal">La marca</p>
-            <h2 class="section-title reveal-delay-1">Royal Prestige — <em>Excelencia en todos los aspectos</em></h2>
-            <div class="gold-line reveal-delay-2" style="margin: 1.5rem auto;"></div>
-            <p class="marca-intro reveal-delay-2">
-                Royal Prestige es una marca reconocida mundialmente por su compromiso con la calidad, la innovación y el bienestar. Con más de 60 años de trayectoria, se ha consolidado como líder en la industria de utensilios de cocina y productos para el hogar.
+            <div class="marca-header reveal">
+                <img src="img/Marca/Royal Prestige.jpg"
+                     alt="Royal Prestige"
+                     class="marca-logo">
+            </div>
+            <p class="section-label reveal">
+                La marca
             </p>
+            <h2 class="section-title reveal-delay-1">
+                Royal Prestige —
+                <em>Excelencia en todos los aspectos</em>
+            </h2>
+            <div class="gold-line reveal-delay-2"></div>
+                <p class="marca-intro reveal-delay-2">
+                Royal Prestige es una marca reconocida mundialmente por su compromiso con la calidad, la innovación y el bienestar. Con más de 60 años de trayectoria, se ha consolidado como líder en la industria de utensilios de cocina y productos para el hogar.
+                </p>
+            </div>
+        </div>
+    </section>
             <div class="beneficios-grid">
                 <div class="benefcios-reveal">
                     <span class="beneficio-icon">🏆</span>
@@ -247,7 +272,7 @@
                     <p class="section-label reveal">Únete al equipo</p>
                     <h2 class="section-title reveal-delay-1">Tu vida puede cambiar hoy<br><em>Descubre la oportunidad de negocio</em></h2>
                     <div class="gold-line reveal-delay-2"></div>
-                    <p class="reveal reveal-delay-2" style="font-size:0.95rem; color: var(--gris-oscuro); line-height:1.9; margin-bottom:2rem;">
+                    <p class="reveal reveal-delay-2" style="font-size:0.95rem; color: var(--blanco); line-height:1.9; margin-bottom:2rem;">
                         Únete a nuestro equipo de distribuidores independientes con Victoria Ascent Global, y construye un negocio propio con el respaldo de una marca internacional.
                     </p>
                     <div class="pasos">
@@ -276,7 +301,7 @@
                     <a href="oportunidad-de-negocio.html" class="btn-primary" style="margin-top: 30px; display: inline-block;">Saber más</a>
                 </div>
                 <div class="oportunidad-visual reveal">
-                    <img src="img/oportunidad de negocio/Oportunidad de negocio.png" alt="Oportunidad de Negocio">
+                    <img src="img/Oportunidad de negocio/Oportunidad de negocio.png" alt="Oportunidad de negocio con Royal Prestige" class="oportunidad-img">
                 </div>
             </div>
         </div>
@@ -351,11 +376,13 @@
 
     <!-- WHATSAPP FLOTANTE -->
     <a href="https://wa.me/524499115546?text=Hola%20Victoria%2C%20vi%20tu%20p%C3%A1gina%20y%20me%20interesa%20saber%20m%C3%A1s"
-   class="whatsapp-float"
-   target="_blank"
-   aria-label="Contactar por WhatsApp">
-    <img src="img/WhatsApp.png" alt="WhatsApp">
-</a>
+       class="whatsapp-float"
+       target="_blank"
+       aria-label="Contactar por WhatsApp">
+        <img src="img/WhatsApp.png" alt="WhatsApp">
+    </a>
+
+    <script src="js/problema-modal.js"></script>
     <script src="script.js" async defer></script>
 </body>
 </html>
