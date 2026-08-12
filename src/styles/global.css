@@ -1,0 +1,3 @@
+@import '../../styles.css';
+/* You can also import the landing page styles if needed. The path contains spaces so it's quoted. */
+@import "../../Landing Page/victoria-ascent-global-website-main/styles.css";
