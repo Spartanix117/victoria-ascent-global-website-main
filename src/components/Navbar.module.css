@@ -1,0 +1,23 @@
+/* Minimal module styles for Navbar to encapsulate layout. Leaves many variables to the global stylesheet. */
+.navbar {
+  /* keep layout consistent with global rules but scope here for component-specific overrides */
+}
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.logo-img { width: 52px; height: auto; display: block; }
+.logo-text { display: flex; flex-direction: column; line-height: 1.1; }
+.logo-name { font-weight: 600; }
+.logo-tagline { font-size: 0.65rem; }
+
+.navRight {
+  display: flex;
+  align-items: center;
+  gap: 1.2rem;
+}
+
+.navLinks { display: flex; list-style: none; gap: 1rem; }
+
+.btnNav { }

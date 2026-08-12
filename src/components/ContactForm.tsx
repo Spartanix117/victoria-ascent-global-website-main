@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import styles from './ContactForm.module.css'
 
 export default function ContactForm(){
   const [name, setName] = useState('')
@@ -13,20 +14,20 @@ export default function ContactForm(){
   }
 
   return (
-    <form className="contacto-form" onSubmit={sendWhatsApp}>
-      <div className="form-group">
+    <form className={`${styles.form} contacto-form`} onSubmit={sendWhatsApp}>
+      <div className={styles.formGroup}>
         <label>Nombre</label>
-        <input value={name} onChange={e => setName(e.target.value)} required />
+        <input className={styles.input} value={name} onChange={e => setName(e.target.value)} required />
       </div>
-      <div className="form-group">
+      <div className={styles.formGroup}>
         <label>Teléfono</label>
-        <input value={phone} onChange={e => setPhone(e.target.value)} required />
+        <input className={styles.input} value={phone} onChange={e => setPhone(e.target.value)} required />
       </div>
-      <div className="form-group">
+      <div className={styles.formGroup}>
         <label>Mensaje</label>
-        <textarea value={message} onChange={e => setMessage(e.target.value)} />
+        <textarea className={styles.input} value={message} onChange={e => setMessage(e.target.value)} />
       </div>
-      <button type="submit" className="btn-whatsapp-submit">Enviar por WhatsApp</button>
+      <button type="submit" className={`${styles.submit} btn-whatsapp-submit`}>Enviar por WhatsApp</button>
       <p className="form-note">Abriremos WhatsApp con tu mensaje para facilitar el contacto.</p>
     </form>
   )

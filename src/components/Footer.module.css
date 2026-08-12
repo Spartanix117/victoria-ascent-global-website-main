@@ -1,0 +1,7 @@
+/* Footer module minimal overrides */
+.footer { padding-top: 30px; }
+.footerGrid { display: grid; grid-template-columns: 1.4fr 1fr 1fr; gap: 24px; }
+.footerBrand { }
+.footerLinks { }
+.footerContact { }
+.footerBottom { text-align: center; padding: 20px 0; }

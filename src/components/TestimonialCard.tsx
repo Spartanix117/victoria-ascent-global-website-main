@@ -1,10 +1,11 @@
 import React from 'react'
+import styles from './TestimonialCard.module.css'
 
 export default function TestimonialCard({ quote, author }: { quote: string; author: string }){
   return (
-    <div className="testimonio-card">
-      <p>"{quote}"</p>
-      <span>- {author}</span>
+    <div className={`${styles.card} testimonio-card`}>
+      <p className={styles.quote}>"{quote}"</p>
+      <span className={styles.author}>- {author}</span>
     </div>
   )
 }

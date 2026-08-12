@@ -1,0 +1,9 @@
+/* TestimonialCard module */
+.card {
+  background: var(--blanco);
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 8px 24px rgba(11,42,74,0.06);
+}
+.quote { font-style: italic; color: var(--gris-oscuro); margin-bottom: 10px; }
+.author { color: var(--dorado); font-weight: 600; }

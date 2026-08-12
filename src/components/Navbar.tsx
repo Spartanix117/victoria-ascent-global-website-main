@@ -1,19 +1,20 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import styles from './Navbar.module.css'
 
 export default function Navbar(){
   return (
-    <nav className="navbar">
+    <nav className={`${styles.navbar} navbar`}>
       <div className="container">
-        <div className="logo">
-          <img src="/assets/Logo/Premium.png" alt="Victoria Ascent Global" className="logo-img" />
-          <div className="logo-text">
-            <span className="logo-name">Victoria Ascent Global</span>
-            <span className="logo-tagline">Distribuidora Independiente</span>
+        <div className={`${styles.logo} logo`}>
+          <img src="/assets/Logo/Premium.png" alt="Victoria Ascent Global" className={`${styles['logo-img']} logo-img`} />
+          <div className={`${styles['logo-text']} logo-text`}>
+            <span className={`${styles['logo-name']} logo-name`}>Victoria Ascent Global</span>
+            <span className={`${styles['logo-tagline']} logo-tagline`}>Distribuidora Independiente</span>
           </div>
         </div>
-        <div className="nav-right">
-          <ul className="nav-links">
+        <div className={`${styles.navRight} nav-right`}>
+          <ul className={`${styles.navLinks} nav-links`}>
             <li><Link to="/" className="active">Inicio</Link></li>
             <li><Link to="/acerca-de-nosotros">Acerca de Nosotros</Link></li>
             <li><Link to="/productos">Productos</Link></li>
@@ -21,7 +22,7 @@ export default function Navbar(){
             <li><Link to="/testimonios">Testimonios</Link></li>
             <li><Link to="/contacto">Contacto</Link></li>
           </ul>
-          <Link to="/oportunidad" className="btn-nav">Únete al Equipo</Link>
+          <Link to="/oportunidad" className={`btn-nav ${styles.btnNav}`}>Únete al Equipo</Link>
         </div>
       </div>
     </nav>
