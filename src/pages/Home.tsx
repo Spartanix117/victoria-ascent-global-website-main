@@ -21,7 +21,7 @@ export default function Home(){
               </div>
             </div>
             <div className="hero-visual reveal">
-              <img src="/Landing Page/victoria-ascent-global-website-main/img/Productos/Sartenes Royal Prestige.jpg" alt="Cocina moderna con Royal Prestige" />
+              <img src="/assets/Productos/Sartenes-Royal-Prestige.jpg" alt="Cocina moderna con Royal Prestige" />
             </div>
           </div>
         </section>

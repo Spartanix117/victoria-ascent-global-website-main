@@ -5,7 +5,7 @@ export default function Navbar(){
     <nav className="navbar">
       <div className="container">
         <div className="logo">
-          <img src="/Landing Page/victoria-ascent-global-website-main/img/Logo/Premium.png" alt="Victoria Ascent Global" className="logo-img" />
+          <img src="/assets/Logo/Premium.png" alt="Victoria Ascent Global" className="logo-img" />
           <div className="logo-text">
             <span className="logo-name">Victoria Ascent Global</span>
             <span className="logo-tagline">Distribuidora Independiente</span>
